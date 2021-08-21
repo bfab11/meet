@@ -26,6 +26,7 @@ export const getAccessToken = async () => {
     }
     return code && getToken(code);
   }
+  console.log(accessToken, 'success getAccessToken')
   return accessToken;
 };
 
@@ -36,6 +37,7 @@ const checkToken = async (accessToken) => {
     .then((res) => res.json())
     .catch((error) => error.json());
   
+  console.log('success checkToken');
   return result;
 };
 
@@ -55,17 +57,14 @@ const removeQuery = () => {
 
 const getToken = async (code) => {
 	const encodeCode = encodeURIComponent(code);
-	const { access_token } = await axios
-		.get(
-			'https://k28bz31f7i.execute-api.us-east-1.amazonaws.com/dev/api/token' +
-				'/' +
-				encodeCode
+	const { access_token } = await fetch(
+			`https://k28bz31f7i.execute-api.us-east-1.amazonaws.com/dev/api/token/${encodeCode}`
 		)
 		.then((res) => {
-			return res.data.tokens.access_token;
+			return res.json();
 		})
 		.catch((error) => error);
-	console.log(access_token);
+	console.log(access_token, 'success getToken');
 	access_token && localStorage.setItem('access_token', access_token);
 
 	return access_token;

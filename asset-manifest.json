@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/meet/static/css/main.12475acc.chunk.css",
-    "main.js": "/meet/static/js/main.4ab7a912.chunk.js",
-    "main.js.map": "/meet/static/js/main.4ab7a912.chunk.js.map",
+    "main.css": "/meet/static/css/main.c8918922.chunk.css",
+    "main.js": "/meet/static/js/main.afaa55ae.chunk.js",
+    "main.js.map": "/meet/static/js/main.afaa55ae.chunk.js.map",
     "runtime-main.js": "/meet/static/js/runtime-main.5db79bdb.js",
     "runtime-main.js.map": "/meet/static/js/runtime-main.5db79bdb.js.map",
     "static/js/2.ce322917.chunk.js": "/meet/static/js/2.ce322917.chunk.js",
@@ -12,14 +12,14 @@
     "index.html": "/meet/index.html",
     "service-worker.js": "/meet/service-worker.js",
     "service-worker.js.map": "/meet/service-worker.js.map",
-    "static/css/main.12475acc.chunk.css.map": "/meet/static/css/main.12475acc.chunk.css.map",
+    "static/css/main.c8918922.chunk.css.map": "/meet/static/css/main.c8918922.chunk.css.map",
     "static/js/2.ce322917.chunk.js.LICENSE.txt": "/meet/static/js/2.ce322917.chunk.js.LICENSE.txt",
     "static/media/App.css": "/meet/static/media/citybackground.a82cfee6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5db79bdb.js",
     "static/js/2.ce322917.chunk.js",
-    "static/css/main.12475acc.chunk.css",
-    "static/js/main.4ab7a912.chunk.js"
+    "static/css/main.c8918922.chunk.css",
+    "static/js/main.afaa55ae.chunk.js"
   ]
 }

@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+body {
+  background-image:url('./citybackground.jpg');
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;

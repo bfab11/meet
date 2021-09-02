@@ -3,6 +3,11 @@ body {
   background-image:url('./citybackground.jpg');
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App {
@@ -82,7 +87,17 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
+.EventList {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 2%;
+  background-color: #ccc;
+  border: 1px solid black;
+
+}
+
 .event {
+  background-color:#ccc;
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
@@ -120,7 +135,8 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
-.numberOfEvents {
+.NumberOfEvents {
+  background-color: #ccc;
   width: 200px;
   margin: 20px auto;
   text-align: center;

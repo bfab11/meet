@@ -153,6 +153,7 @@ input[type="number"] {
 .Alert {
   position: fixed;
   top: 20px;
+  background-color: rgb(241, 123, 123);
 }
 
 .data-vis-wrapper {

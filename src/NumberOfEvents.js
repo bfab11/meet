@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
 import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
@@ -12,12 +13,12 @@ class NumberOfEvents extends Component {
         if (value < 1) {
             return this.setState({
                 errorText: 'Please choose a number between 1 and 32',
-                numberOfEvents: ''
+                numberOfEvents: '',
             });
         } else if (value > 32) {
             return this.setState({
                 errorText: 'Please choose a number between 1 and 32',
-                numberOfEvents: ''
+                numberOfEvents: '',
             });
         } else {
             this.setState({
@@ -32,7 +33,15 @@ class NumberOfEvents extends Component {
         const numberOfEvents = this.state.numberOfEvents;
         return (
             <div className="NumberOfEvents">
-                <form>
+                <Form>
+                    <Form.Group>
+                        <Form.Label size="lg">Number of Events: </Form.Label>
+                        <Form.Control size ="lg" type="text" placeholder="32" className="EventsNumber" value={numberOfEvents} onChange={(e) => this.handleInputChanged(e)} />
+                        <ErrorAlert text={this.state.errorText} />
+                    </Form.Group>
+                </Form>
+
+                {/* <form>
                     <ErrorAlert text={this.state.errorText} />
                     <label>Number of Events:</label>
                     <input
@@ -41,7 +50,7 @@ class NumberOfEvents extends Component {
                         value={numberOfEvents}
                         onChange={(e) => this.handleInputChanged(e)}
                     />
-                </form>
+                </form> */}
             </div>
         );
     }

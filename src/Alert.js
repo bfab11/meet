@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import Alert from 'react-bootstrap/Alert';
 
-class Alert extends Component {
+class alertStyle extends Component {
     constructor(props) {
         super(props);
         this.color = null;
@@ -12,8 +13,12 @@ class Alert extends Component {
         };
     }
 
+
     render() {
         return (
+            // <Alert variant={this.variant}>
+            //     <p>{this.props.text}</p>
+            // </Alert>
             <div className="Alert">
                 <p style={this.getStyle()}>{this.props.text}</p>
             </div>
@@ -21,18 +26,19 @@ class Alert extends Component {
     }
 }
 
-class InfoAlert extends Alert {
+class InfoAlert extends alertStyle {
     constructor(props) {
         super(props);
         this.color = 'blue';
     }
 }
 
-class ErrorAlert extends Alert {
+class ErrorAlert extends alertStyle {
     constructor(props) {
         super(props);
         this.color = 'red';
     }
 }
+  
 
 export { InfoAlert, ErrorAlert };

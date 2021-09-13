@@ -1,44 +1,55 @@
 import React, { Component } from 'react';
-import Alert from 'react-bootstrap/Alert';
 
-class alertStyle extends Component {
+class Alert extends Component {
     constructor(props) {
         super(props);
-        this.color = null;
+        this.backgroundColor = null;
+        this.borderColor = null;
     }
 
     getStyle = () => {
         return {
-            color: this.color,
+            backgroundColor: this.color,
+            borderColor: this.borderColor
         };
     }
 
 
     render() {
         return (
-            // <Alert variant={this.variant}>
+            // <Alert show={this.visible} variant={this.variant}>
             //     <p>{this.props.text}</p>
             // </Alert>
-            <div className="Alert">
-                <p style={this.getStyle()}>{this.props.text}</p>
+            <div>
+                <p className="Alert" style={this.getStyle()}>{this.props.text}</p>
             </div>
         );
     }
 }
 
-class InfoAlert extends alertStyle {
+class InfoAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'blue';
+        this.color = 'rgb(234, 250, 255)';
+        this.borderColor = 'blue';
     }
 }
 
-class ErrorAlert extends alertStyle {
+class ErrorAlert extends Alert {
     constructor(props) {
         super(props);
-        this.color = 'red';
+        this.color = 'rgb(255, 205, 205)';
+        this.borderColor = 'red';
     }
 }
+
+class WarningAlert extends Alert {
+    constructor(props) {
+      super(props);
+      this.color = 'rgb(255, 255, 215)';
+      this.borderColor = 'yellow'
+    }
+  }
   
 
-export { InfoAlert, ErrorAlert };
+export { InfoAlert, ErrorAlert, WarningAlert };

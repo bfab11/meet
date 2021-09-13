@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/meet/static/css/main.01b36ebd.chunk.css",
-    "main.js": "/meet/static/js/main.af1482ac.chunk.js",
-    "main.js.map": "/meet/static/js/main.af1482ac.chunk.js.map",
-    "runtime-main.js": "/meet/static/js/runtime-main.3b1ccffb.js",
-    "runtime-main.js.map": "/meet/static/js/runtime-main.3b1ccffb.js.map",
+    "main.css": "/meet/static/css/main.73010724.chunk.css",
+    "main.js": "/meet/static/js/main.628a8f3e.chunk.js",
+    "main.js.map": "/meet/static/js/main.628a8f3e.chunk.js.map",
+    "runtime-main.js": "/meet/static/js/runtime-main.717ce157.js",
+    "runtime-main.js.map": "/meet/static/js/runtime-main.717ce157.js.map",
     "static/css/2.feda8dcb.chunk.css": "/meet/static/css/2.feda8dcb.chunk.css",
-    "static/js/2.474faf53.chunk.js": "/meet/static/js/2.474faf53.chunk.js",
-    "static/js/2.474faf53.chunk.js.map": "/meet/static/js/2.474faf53.chunk.js.map",
-    "static/js/3.e4e03583.chunk.js": "/meet/static/js/3.e4e03583.chunk.js",
-    "static/js/3.e4e03583.chunk.js.map": "/meet/static/js/3.e4e03583.chunk.js.map",
+    "static/js/2.b0b99008.chunk.js": "/meet/static/js/2.b0b99008.chunk.js",
+    "static/js/2.b0b99008.chunk.js.map": "/meet/static/js/2.b0b99008.chunk.js.map",
+    "static/js/3.1c9ea0ff.chunk.js": "/meet/static/js/3.1c9ea0ff.chunk.js",
+    "static/js/3.1c9ea0ff.chunk.js.map": "/meet/static/js/3.1c9ea0ff.chunk.js.map",
     "index.html": "/meet/index.html",
     "service-worker.js": "/meet/service-worker.js",
     "service-worker.js.map": "/meet/service-worker.js.map",
     "static/css/2.feda8dcb.chunk.css.map": "/meet/static/css/2.feda8dcb.chunk.css.map",
-    "static/css/main.01b36ebd.chunk.css.map": "/meet/static/css/main.01b36ebd.chunk.css.map",
-    "static/js/2.474faf53.chunk.js.LICENSE.txt": "/meet/static/js/2.474faf53.chunk.js.LICENSE.txt",
+    "static/css/main.73010724.chunk.css.map": "/meet/static/css/main.73010724.chunk.css.map",
+    "static/js/2.b0b99008.chunk.js.LICENSE.txt": "/meet/static/js/2.b0b99008.chunk.js.LICENSE.txt",
     "static/media/App.css": "/meet/static/media/citybackground.a82cfee6.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b1ccffb.js",
+    "static/js/runtime-main.717ce157.js",
     "static/css/2.feda8dcb.chunk.css",
-    "static/js/2.474faf53.chunk.js",
-    "static/css/main.01b36ebd.chunk.css",
-    "static/js/main.af1482ac.chunk.js"
+    "static/js/2.b0b99008.chunk.js",
+    "static/css/main.73010724.chunk.css",
+    "static/js/main.628a8f3e.chunk.js"
   ]
 }

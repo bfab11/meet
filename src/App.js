@@ -10,6 +10,10 @@ import './nprogress.css';
 import NumberOfEvents from './NumberOfEvents';
 import { WarningAlert } from './Alert';
 
+import {
+  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
+} from 'recharts';
+
 class App extends Component {
   state = {
     events: [],
@@ -38,6 +42,16 @@ class App extends Component {
     this.updateEvents(currentCity, eventNumber);
   }
 
+  getData = () => {
+    const {locations, events} = this.state;
+    const data = locations.map((location) => {
+      const number = events.filter((event) => event.location === location).length
+      const city = location.split(', ').shift()
+      return {city, number};
+    })
+    return data;
+  };
+
   componentDidMount() {
     const { numberOfEvents } = this.state;
     this.mounted = true;
@@ -58,18 +72,58 @@ class App extends Component {
   render() {
     if(!navigator.onLine){
       return(
-      <div className="App">
-        <WarningAlert text="You are offline. New events could not be loaded"/>
-        <NumberOfEvents updateNumber={(e) => this.updateNumber(e)} />
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} numberOfEvents={this.state.numberOfEvents}/>
+        <div className="App">
+        <div className="AppSearch">
+          <WarningAlert text="You are offline. New events could not be loaded"/>
+          <h1>Meet App</h1>
+          <NumberOfEvents updateNumber={(e) => this.updateNumber(e)} />
+          <h4>Choose your nearest city</h4>
+          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} numberOfEvents={this.state.numberOfEvents}/>
+          <div className="chart">
+          <br></br><h4>Events in each city</h4>
+          <ResponsiveContainer height={400} >
+            <ScatterChart
+              margin={{
+                top: 20, right: 20, bottom: 20, left: 20,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis type="number" dataKey="number" name="number of events" />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
+          </div>
+        </div>
         <EventList events={this.state.events} />
       </div>
       )
     }
     return (
       <div className="App">
-        <NumberOfEvents updateNumber={(e) => this.updateNumber(e)} />
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} numberOfEvents={this.state.numberOfEvents}/>
+        <div className="AppSearch">
+          <h1>Meet App</h1>
+          <NumberOfEvents updateNumber={(e) => this.updateNumber(e)} />
+          <h4>Choose your nearest city</h4>
+          <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} numberOfEvents={this.state.numberOfEvents}/>
+          <div className="chart">
+          <br></br><h4>Events in each city</h4>
+          <ResponsiveContainer height={400} >
+            <ScatterChart
+              margin={{
+                top: 20, right: 20, bottom: 20, left: 20,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis type="number" dataKey="number" name="number of events" />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
+          </div>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );
